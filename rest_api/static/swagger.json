@@ -1,0 +1,167 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "sean",
+    "version": "1.0.0",
+    "title": "Seans-Python3-Flask-Rest-Boilerplate",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Post Request",
+      "description": "Example API for requesting and return user posts"
+    }
+  ],
+  "paths": {
+    "/post": {
+      "get": {
+        "tags": ["Post request"],
+        "summary": "Returns postRequests",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/postRequestPostBody"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Add a post"],
+        "summary": "Creates new post",
+        "requestBody": {
+          "description": "New post created",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/postRequestPostBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "New post created",
+            "schema": {
+              "$ref": "#/components/schemas/postRequestPostBody"
+            }
+          }
+        }
+      }
+    },
+    "/post/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of the user",
+          "type": "integer"
+        }
+      ],
+      "get": {
+        "tags": ["User posts request"],
+        "summary": "Returns user postRequests",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/postRequestPostBody"
+            }
+          }
+        }
+      }     
+    },
+    "/posts/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of the post",
+          "type": "integer"
+        }
+      ],
+      "delete": {
+        "tags": ["Delete user posts request"],
+        "summary": "Delete user postRequests",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/postRequestPostBody"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": ["Update a post"],
+        "summary": "Update a post",
+        "requestBody": {
+          "description": "Post updated",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/postRequestPostBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "New post created",
+            "schema": {
+              "$ref": "#/components/schemas/postRequestPostBody"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "id": {
+        "properties": {
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "postRequestPostBody": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "format": "string"
+          },
+          "priority": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "status": {
+            "type": "string",
+            "format": "string"
+          },
+          "title": {
+            "type": "string",
+            "format": "string"
+          },
+          "user": {
+            "type": "integer",
+            "format": "integer"
+          }
+        }
+      }
+    }
+  }
+}

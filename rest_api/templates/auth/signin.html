@@ -1,0 +1,34 @@
+{% extends './base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block customCSS %}
+
+{% endblock %}
+
+{% block body %}
+<main class="form-signin w-100 m-auto d-flex justify-content-center align-items-center">
+    <form  class="w-50 m-2 " action="/signin" method="POST">
+      <img class="mb-4" src="https://cdn.worldvectorlogo.com/logos/flask.svg" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  
+      <div class="form-floating">
+        <input type="text" class="form-control my-2" id="username" name="username" placeholder="Username">
+        <label for="floatingInput">Username</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="password" class="form-control my-2" id="password" name="password" placeholder="Password">
+        <label for="password">Password</label>
+      </div>
+  
+      <div class="checkbox mx-4 my-3 d-flex align-items-end justify-content-end">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <div class="d-flex justify-content-center align-items-center"><button class="w-75 btn btn-lg btn-primary" type="submit">Sign in</button></div>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+    </form>
+  </main>
+{% endblock %}
