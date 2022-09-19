@@ -19,10 +19,10 @@ Once you have your server running you have to setup a new user, you can use the 
 ```JSON
 {
 "description": "Description as a String",
-"priority": Integer,
+"priority": 10,
 "status": "Published / Deleted",
 "title": "Title as a String",
-"user" : 1 This is your user id, as Integer
+"user" : 1
 }
 ```
 Once you have your first post, you can see it through your navigator signin in at [localhost/signin](http://localhost:5000/signin).
