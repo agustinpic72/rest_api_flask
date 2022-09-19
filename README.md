@@ -14,7 +14,7 @@ or
 Python3 app.py
 ```
 ## Use
-Once you have your server running you have to setup a new user, you can use the [localhost/signup](http://localhost:5000/signup) link or just enter the index and it'll redirect you to the signup page. After that you need to create sign in, and then, create your first post with postman. The method you should use is <strong>POST</strong> the format of the json is:
+Once you have your server running you have to setup a new user, you can use the [localhost/signup](http://localhost:5000/signup) link or just enter the [index](http://localhost:5000) and it'll redirect you to the signup page. After that you need to create sign in, and then, create your first post with postman. The method you should use is <strong>POST</strong> the format of the json is:
 
 ```JSON
 {
