@@ -3,15 +3,15 @@ Rest Api created with Flask, to install this project please follow the instructi
 
 -First of all create a virtual environment and install required dependencies i suggest to use:
 ```bash
-'pipenv install -r requirements.txt'
+pipenv install -r requirements.txt
 ```
 -Then you can run the app.py file with: 
 ```bash
-'Python app.py'
+Python app.py
 ```
 or 
  ```bash
-'Python3 app.py'
+Python3 app.py
 ```
 ## Use
 Once you have your server running you have to setup a new user, you can use the [localhost/signup](http://localhost:5000/signup) link or just enter the index and it'll redirect you to the signup page. After that you need to create sign in, and then, create your first post with postman. The method you should use is <strong>POST</strong> the format of the json is:
