@@ -1,7 +1,7 @@
 # Rest api with flask
 Rest Api created with Flask, to install this project please follow the instructions below.
 
--First of all create a virtual environment and install required dependencies i suggest to use:
+-First of all create a virtual environment and install required dependencies with:
 ```bash
 pipenv install -r requirements.txt
 ```
