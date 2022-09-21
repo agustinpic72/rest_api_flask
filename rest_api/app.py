@@ -166,7 +166,6 @@ def update_Post(id):
     priority = request.json['priority']
     status = request.json['status']
     user = request.json['user']
-    print("HOLA SOY TITLE:", post.title)
     post.title = title
     post.description = description
     post.priority = priority
